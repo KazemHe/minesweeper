@@ -23,10 +23,10 @@ var gLevel = {
 
 function inInit() {
     gBoard = buildBoard()
-    setMinesNegsCountAll(gBoard)
+    // addMine()
     renderBoard(gBoard)
+    setMinesNegsCountAll(gBoard)
     // console.log(gBoard)
-
     // setMinesNegsCount(1, 2, gBoard)
 }
 

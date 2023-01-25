@@ -46,24 +46,24 @@ function renderBoard(mat) {
 // function addMine() {
 
 //     for (var i = 0; i < gLevel.mines; i++) {
-//         const emptyPos = getRandompos()
+//         const emptyPos = getRandompos(gBoard)
 //         if (!emptyPos) return
 //         gBoard[emptyPos.i][emptyPos.j] = MINE
 //         // renderCell(emptyPos, Mine)
+//         console.log(gBoard)
+//         console.log(emptyPos)
+
 //     }
+//     renderBoard(gBoard)
 // }
 
-
-var empty = getRandompos(gBoard)
-
-console.log(empty)
 
 function getRandompos(borad) {
 
     const emptyPos = []
     for (var i = 0; i < borad.length; i++) {
         for (var j = 0; j < borad[i].length; j++) {
-            if (borad[i][j].isShown) {
+            if (!borad[i][j].isShown) {
                 emptyPos.push({ i, j })
             }
         }
