@@ -1,0 +1,34 @@
+body {
+   
+    background-color: rgb(235, 225, 225);
+    color: rgb(0, 0, 0);
+}
+
+
+div {
+    border-width: 2px;
+    border-color: black;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    color: aqua;
+    background-color: gray;
+}
+
+h1 {
+    margin-left: 200px;
+}
+
+table {
+    margin-left: 200px;
+}
+
+footer {
+    font-size: smaller;
+    margin-top: 100px;
+    margin-left: 200px;
+}
