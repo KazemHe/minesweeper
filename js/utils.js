@@ -11,19 +11,19 @@ function renderBoard(mat) {
             cell = mat[i][j]
 
             const className = `cell currCell${i}-${j}`
+            const elId = i+'_'+j;
+            strHTML += `<td id="${elId}" onclick="onCellClicked(innerText,this,${i},${j})"  oncontextmenu="onCellMarked(event,className,${i},${j})" class="${className}">`
+            // const minesAround = cell.minesAroundCount
 
-            strHTML += `<td onclick="onCellClicked(innerText,this,${i},${j})" class="${className}">`
-            const minesAround = cell.minesAroundCount
-
-            if (cell.isMine) strHTML += MINE
+            if (cell.isMine && cell.isShown) strHTML += MINE
 
 
-            else if (minesAround > 0) {
+            // else if (minesAround > 0) {
 
-                if (cell.isShown)
-                    strHTML += `${minesAround}`
+            //     if (cell.isShown)
+            //         strHTML += `${minesAround}`
 
-            }
+            // }
 
             strHTML += `</td>\n`
         }
@@ -32,30 +32,26 @@ function renderBoard(mat) {
 
     strHTML += '</tbody></table>'
 
-    // console.log(strHTML)
 
     var elContainer = document.querySelector('div')
     // console.log(elContainer)
     elContainer.innerHTML = strHTML
 
-    // console.log(strHTML)
 }
 
 
 
-// function addMine() {
+function addMine() {
 
-//     for (var i = 0; i < gLevel.mines; i++) {
-//         const emptyPos = getRandompos(gBoard)
-//         if (!emptyPos) return
-//         gBoard[emptyPos.i][emptyPos.j] = MINE
-//         // renderCell(emptyPos, Mine)
-//         console.log(gBoard)
-//         console.log(emptyPos)
+    for (var i = 0; i < gLevel.mines; i++) {
+        const emptyPos = getRandompos(gBoard)
+        if (!emptyPos) return
+        gBoard[emptyPos.i][emptyPos.j].isMine = true
 
-//     }
-//     renderBoard(gBoard)
-// }
+    }
+
+    return renderBoard(gBoard)
+}
 
 
 function getRandompos(borad) {

@@ -1,7 +1,8 @@
 body {
-   
+
     background-color: rgb(235, 225, 225);
     color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 
@@ -16,19 +17,61 @@ div {
     text-align: center;
     font-size: 1.5em;
     color: aqua;
-    background-color: gray;
+    background-color: darkgray;
+}
+
+h3 {
+    color: brown;
+    font-size: small;
+    margin: auto;
+
+}
+
+h2 {
+
+    text-align: center;
+    font-size: medium;
+    font-style: initial;
+}
+
+.cellOnClick {
+
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(227, 76, 227);
+    background-color: lightgray
 }
 
 h1 {
-    margin-left: 200px;
+    text-align: center;
 }
 
 table {
-    margin-left: 200px;
+    margin: auto;
+    size: 500px;
 }
 
 footer {
     font-size: smaller;
     margin-top: 100px;
-    margin-left: 200px;
+}
+
+button {
+    border-radius: 30px;
+
+}
+
+
+.modal {
+
+    margin: auto;
+    background-color: blue;
+    font-size: x-large;
+
+}
+
+.hidden {
+    display: none;
 }

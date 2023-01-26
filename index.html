@@ -11,14 +11,24 @@
 
 <body onload="inInit()">
     <h1>Minesweeper</h1>
-    <div></div>
+    <h2>levels :
+        <button id="4" onclick="levels(id)">Beginner</button>
+        <button id="8" onclick="levels(id)">Medium</button>
+        <button id="12" onclick="levels(id)">Expert</button>
+    </h2>
+    <button onclick=" inInit()">restart</button>
+    <h3>timer : <span class="timer">000</span></h3>
+    <!-- <h3>shown :<span class="shown">0</span></h3> -->
 
+    <div></div>
+    <p class="modal hidden"></p>
 
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
 </body>
 <footer>
     Kazem Hegaze
-    
-  </footer>
+
+</footer>
+
 </html>
