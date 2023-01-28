@@ -12,12 +12,17 @@ div {
 }
 
 .cell {
+
+
+    background: linear-gradient(to top, #5d4d4d, #857575, #5d4d4d, #554a4a, #5d4d4d, #9f8d8e, #9f8d8e);
+    cursor: auto;
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 1.5em;
-    color: aqua;
     background-color: darkgray;
+
+
 }
 
 h3 {
@@ -35,12 +40,12 @@ h2 {
 }
 
 .cellOnClick {
-
+    margin: auto;
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 1.5em;
-    color: rgb(227, 76, 227);
+    color: rgb(203, 156, 80);
     background-color: lightgray
 }
 
@@ -60,18 +65,27 @@ footer {
 
 button {
     border-radius: 30px;
-
 }
-
 
 .modal {
 
     margin: auto;
     background-color: blue;
+    color: beige;
     font-size: x-large;
 
+    padding: 35px;
 }
 
 .hidden {
     display: none;
+}
+
+.mark {
+    padding: 10px;
+
+}
+
+.mine {
+    padding: 10px;
 }

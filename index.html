@@ -11,17 +11,21 @@
 
 <body onload="inInit()">
     <h1>Minesweeper</h1>
+
     <h2>levels :
         <button id="4" onclick="levels(id)">Beginner</button>
         <button id="8" onclick="levels(id)">Medium</button>
         <button id="12" onclick="levels(id)">Expert</button>
     </h2>
-    <button onclick=" inInit()">restart</button>
-    <h3>timer : <span class="timer">000</span></h3>
-    <!-- <h3>shown :<span class="shown">0</span></h3> -->
+    <button class="restart" onclick=" inInit()"></button>
+    <h2>LIVE : <span class="live"></span><br>
+        💣: <span class="mine"></span>
+        🚩: <span class="mark"></span>
+    </h2>
+    <p class="modal hidden"></p>
+    <h3>timer : <span class="timer">00</span></h3>
 
     <div></div>
-    <p class="modal hidden"></p>
 
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>

@@ -10,20 +10,10 @@ function renderBoard(mat) {
         for (var j = 0; j < mat[0].length; j++) {
             cell = mat[i][j]
 
-            const className = `cell currCell${i}-${j}`
-            const elId = i+'_'+j;
-            strHTML += `<td id="${elId}" onclick="onCellClicked(innerText,this,${i},${j})"  oncontextmenu="onCellMarked(event,className,${i},${j})" class="${className}">`
-            // const minesAround = cell.minesAroundCount
+            const className = `cell `
+            const elId = i + '_' + j;
+            strHTML += `<td id="${elId}" onclick="onCellClicked(this,${i},${j})"  oncontextmenu="onCellMarked(event,${i},${j})" class="${className}">`
 
-            if (cell.isMine && cell.isShown) strHTML += MINE
-
-
-            // else if (minesAround > 0) {
-
-            //     if (cell.isShown)
-            //         strHTML += `${minesAround}`
-
-            // }
 
             strHTML += `</td>\n`
         }
@@ -44,7 +34,7 @@ function renderBoard(mat) {
 function addMine() {
 
     for (var i = 0; i < gLevel.mines; i++) {
-        const emptyPos = getRandompos(gBoard)
+        const emptyPos = getRandomPos(gBoard)
         if (!emptyPos) return
         gBoard[emptyPos.i][emptyPos.j].isMine = true
 
@@ -54,12 +44,12 @@ function addMine() {
 }
 
 
-function getRandompos(borad) {
+function getRandomPos(board) {
 
     const emptyPos = []
-    for (var i = 0; i < borad.length; i++) {
-        for (var j = 0; j < borad[i].length; j++) {
-            if (!borad[i][j].isShown) {
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[i].length; j++) {
+            if (!board[i][j].isShown) {
                 emptyPos.push({ i, j })
             }
         }
